@@ -1,5 +1,5 @@
 # Signalling entropy estimation with integration of correction method on the interaction networks
-The given code computes signal entropy by integrating a protein interaction network and expression data.
+The given code computes signalling entropy by integrating a protein interaction network with an expression dataset.
 
 ## DoIntegPIN_JMK.R
 Includes the functions necessary for integrating a PIN with a gene expression set and compute the interactions probabilities (p.m).
