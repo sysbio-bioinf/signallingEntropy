@@ -1,7 +1,7 @@
 ### CompSR_AS.R
 
 ### CompS: Computes local entropy of a node with stochastic vector p.v
-### lines 7-12 from CompSR.R (Teschendorff)
+### correspondig to lines 7-12 from CompSR.R (Teschendorff)
 CompS <- function(p.v){
   tmp.idx <- which(p.v>0);
   S <-  - sum( p.v[tmp.idx]*log(p.v[tmp.idx]) )
@@ -10,7 +10,7 @@ CompS <- function(p.v){
 
 ### CompNS: 
 ### compute the normalised local entropy of a node with stochastic vector p.v
-### lines 14-24 from CompSR.R (Teschendorff)
+### corresponding to lines 14-24 from CompSR.R (Teschendorff)
 CompNS <- function(p.v){
   tmp.idx <- which(p.v>0);
   if(length(tmp.idx)>1){
@@ -40,7 +40,7 @@ CompMaxSR <- function(adj.m){
 
 ### CompSR.ne
 ### compute the non-equilibrium entropies for the full networks
-### line 117 from CompSR.R (Teschendorff)
+### corresponding to line 117 from CompSR.R (Teschendorff)
 ### INPUT: p.m -> proability matrix pre-calculated and saved for one sample
 ### OUTPUT: list containing the global entropy (as average of the normalised locals) and the normalised locals  
 CompSR.ne <- function(p.m){
@@ -50,7 +50,7 @@ CompSR.ne <- function(p.m){
 
 ### CompSR
 ### MAIN function for computing the global entropy normalised by the maximum
-### lines 102-123 from CompSR.R (Teschendorff)
+### comparable to lines 102-123 from CompSR.R (Teschendorff)
 ### INPUT:
 ### p.m: probability matrix combining already the gene expression profile exp.v and the adjacency matrix adj.m
 ### exp.v: a genome-wide expression vector of a sample with names labeling the genes (also annotated to entrez gene IDs) of same length as rows of adj.m.
