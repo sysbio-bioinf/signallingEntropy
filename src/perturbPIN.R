@@ -12,8 +12,9 @@ reducePIN <- function(adj.m, perc, sn=123){
 ### enlarge PIN
 enlargePIN <- function(adj.m, perc, sn=123){
   set.seed(sn)
-  allEdges <- which(lower.tri(adj.m) & adj.m==0)
-  addEdges <- sample(allEdges,perc*length(allEdges))
+  allEdges <- which(lower.tri(adj.m) & adj.m==1)
+  nonEdges <- which(lower.tri(adj.m) & adj.m==0)
+  addEdges <- sample(nonEdges,perc*length(allEdges))
   adj.m[addEdges] <- 1
   
   adj.m <- 1 - adj.m
